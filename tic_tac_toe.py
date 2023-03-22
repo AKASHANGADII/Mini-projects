@@ -47,39 +47,39 @@ def winner():
         print("\n     Player 2 won the match\n     Player 1 better luck next time")
         exit()
 
-#function to get input from the user with validation
-def userinput():
-    for j in range(1,10):
-        num=0
-        if j%2==0:
-            print("\nPlayer 2 turn>>")
-            while num not in range(1,10):
-                num=int(input("Enter the postion (1 to 9)>>"))
-                if num-1 in over:
-                    print(table[num-1]+"Already exits\nEnter valid number")
-                    show_table()
-                    num=0
-            over.append(num-1)
-            player2_list.append(num-1)
-            player2_list.sort()
-            table[num-1]=player2
-            show_table()
-        else:
-            print("\nPlayer 1 turn>>")
-            while num not in range(1,10):
-                num=int(input("Enter the postion (1 to 9)>>"))
-                if num-1 in over:
-                    print(table[num-1]+" Already exits\nEnter valid number\n")
-                    show_table()
-                    num=0
+# #function to get input from the user with validation
+# def userinput():
+#     for j in range(1,10):
+#         num=0
+#         if j%2==0:
+#             print("\nPlayer 2 turn>>")
+#             while num not in range(1,10):
+#                 num=int(input("Enter the postion (1 to 9)>>"))
+#                 if num-1 in over:
+#                     print(table[num-1]+"Already exits\nEnter valid number")
+#                     show_table()
+#                     num=0
+#             over.append(num-1)
+#             player2_list.append(num-1)
+#             player2_list.sort()
+#             table[num-1]=player2
+#             show_table()
+#         else:
+#             print("\nPlayer 1 turn>>")
+#             while num not in range(1,10):
+#                 num=int(input("Enter the postion (1 to 9)>>"))
+#                 if num-1 in over:
+#                     print(table[num-1]+" Already exits\nEnter valid number\n")
+#                     show_table()
+#                     num=0
                 
-            over.append(num-1)
-            player1_list.append(num-1)
-            player1_list.sort()
-            table[num-1]=player1
-            show_table()
-        if j>4:
-            winner()
-userinput()
+#             over.append(num-1)
+#             player1_list.append(num-1)
+#             player1_list.sort()
+#             table[num-1]=player1
+#             show_table()
+#         if j>4:
+#             winner()
+# userinput()
 
 
